@@ -28,7 +28,8 @@ class LogInVC: UIViewController {
         }
         if let password = UserDefaults.standard.object(forKey: "password") as? String {
             self.passwordTextField.text = password
-        }  
+        }
+        
     }
     
     @IBAction func backBtn(_ sender: Any) {
@@ -50,7 +51,7 @@ class LogInVC: UIViewController {
             return
         }
         
-        TasksProvider().loadTasks { tasks in
+        TasksProvider().loadTasks (_userName: userNameTextField.text!) { tasks in
             self.tasks = tasks
             print(tasks.count)
             
@@ -58,17 +59,17 @@ class LogInVC: UIViewController {
                 print(tasks[index].user_name ?? ""," : ", tasks[index].password ?? "" )
             }
             
-            for index in 0..<tasks.count {
+            //for index in 0..<tasks.count {
                 
-                if (userName == tasks[index].user_name ?? "") && (userPassword == tasks[index].password ?? "" ) {
+            if (userName == tasks[0].user_name ?? "") && (userPassword == tasks[0].password ?? "" ) {
                     
-                    UserDefaults.standard.set(self.userNameTextField.text, forKey: "userName")
-                    UserDefaults.standard.set(self.passwordTextField.text, forKey: "password")
-                    UserDefaults.standard.synchronize()
+                UserDefaults.standard.set(self.userNameTextField.text, forKey: "userName")
+                UserDefaults.standard.set(self.passwordTextField.text, forKey: "password")
+                UserDefaults.standard.synchronize()
                     
-                    self.performSegue(withIdentifier: "MenuVC", sender: nil)
+                self.performSegue(withIdentifier: "MenuVC", sender: nil)
                 }
-            }
+            //}
             self.displayMessage(userMessage: "Hibás adatok!")
             return
         }

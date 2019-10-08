@@ -11,8 +11,9 @@ import OHMySQL
 
 class TasksProvider {
     
-    func loadTasks(_ completion: @escaping ([Task]) -> ()) {
-        let query = OHMySQLQueryRequestFactory.select("user", condition: nil)
+    func loadTasks(_userName: String, completion: @escaping ([Task]) -> ()) {
+        print(_userName)
+        let query = OHMySQLQueryRequestFactory.select("user", condition: "user_name = '\(_userName)'")
         let response = try? OHMySQLContainer.shared.mainQueryContext?.executeQueryRequestAndFetchResult(query)
         
         guard let responseObject = response as? [[String : Any]] else {
