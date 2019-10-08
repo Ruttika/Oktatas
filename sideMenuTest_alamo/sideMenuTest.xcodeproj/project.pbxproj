@@ -22,8 +22,11 @@
 		C2594D7E2275E5160019E441 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2594D7D2275E5160019E441 /* Files.swift */; };
 		C2594D802275FEB80019E441 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2594D7F2275FEB80019E441 /* MessageCell.swift */; };
 		C2594D82227632B80019E441 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2594D81227632B80019E441 /* ClassCell.swift */; };
+		C28D49C5234D0EA100871FEA /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C4234D0EA100871FEA /* UserDetails.swift */; };
+		C28D49C7234D12B100871FEA /* DatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C6234D12B100871FEA /* DatabaseConfig.swift */; };
+		C28D49C9234D152100871FEA /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C8234D152100871FEA /* UserDetailsViewController.swift */; };
 		C2C9815921BD7403007B98F5 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C9815821BD7403007B98F5 /* DesignableView.swift */; };
-		C2F6BCA2234106160092FA15 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F6BCA1234106160092FA15 /* Task.swift */; };
+		C2F6BCA2234106160092FA15 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F6BCA1234106160092FA15 /* User.swift */; };
 		C2F6BCA4234107560092FA15 /* TaskProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F6BCA3234107560092FA15 /* TaskProvider.swift */; };
 		C76E6791C92CFC80A6127323 /* Pods_sideMenuTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE064835C71602ED79704B7F /* Pods_sideMenuTest.framework */; };
 /* End PBXBuildFile section */
@@ -48,8 +51,11 @@
 		C2594D7D2275E5160019E441 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		C2594D7F2275FEB80019E441 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		C2594D81227632B80019E441 /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
+		C28D49C4234D0EA100871FEA /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		C28D49C6234D12B100871FEA /* DatabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConfig.swift; sourceTree = "<group>"; };
+		C28D49C8234D152100871FEA /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		C2C9815821BD7403007B98F5 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
-		C2F6BCA1234106160092FA15 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		C2F6BCA1234106160092FA15 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C2F6BCA3234107560092FA15 /* TaskProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProvider.swift; sourceTree = "<group>"; };
 		EE064835C71602ED79704B7F /* Pods_sideMenuTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sideMenuTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,8 +118,11 @@
 				C2594D81227632B80019E441 /* ClassCell.swift */,
 				C220FBAD2276EB5E00665985 /* FileTablteViewVC.swift */,
 				C220FBAF2276ECB700665985 /* FileCell.swift */,
-				C2F6BCA1234106160092FA15 /* Task.swift */,
+				C2F6BCA1234106160092FA15 /* User.swift */,
 				C2F6BCA3234107560092FA15 /* TaskProvider.swift */,
+				C28D49C4234D0EA100871FEA /* UserDetails.swift */,
+				C28D49C6234D12B100871FEA /* DatabaseConfig.swift */,
+				C28D49C8234D152100871FEA /* UserDetailsViewController.swift */,
 			);
 			path = sideMenuTest;
 			sourceTree = "<group>";
@@ -239,11 +248,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C9815921BD7403007B98F5 /* DesignableView.swift in Sources */,
+				C28D49C5234D0EA100871FEA /* UserDetails.swift in Sources */,
+				C28D49C7234D12B100871FEA /* DatabaseConfig.swift in Sources */,
 				C2594D802275FEB80019E441 /* MessageCell.swift in Sources */,
 				C220FBB02276ECB700665985 /* FileCell.swift in Sources */,
 				C20340F821AB2C5400363725 /* AppDelegate.swift in Sources */,
 				C2594D82227632B80019E441 /* ClassCell.swift in Sources */,
 				C2F6BCA4234107560092FA15 /* TaskProvider.swift in Sources */,
+				C28D49C9234D152100871FEA /* UserDetailsViewController.swift in Sources */,
 				C2248BA32221990900AD2176 /* LogInVC.swift in Sources */,
 				C220FBAE2276EB5E00665985 /* FileTablteViewVC.swift in Sources */,
 				C2594D7C2275E4210019E441 /* Message.swift in Sources */,
@@ -251,7 +263,7 @@
 				C2594D7A2275E40D0019E441 /* Class.swift in Sources */,
 				C2248BA52221A2E600AD2176 /* MenuVC.swift in Sources */,
 				C2594D7E2275E5160019E441 /* Files.swift in Sources */,
-				C2F6BCA2234106160092FA15 /* Task.swift in Sources */,
+				C2F6BCA2234106160092FA15 /* User.swift in Sources */,
 				C2248BA72221B43100AD2176 /* ScheduleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

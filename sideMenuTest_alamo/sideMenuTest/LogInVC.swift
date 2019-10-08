@@ -18,7 +18,7 @@ class LogInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureMySQL()
+        DatabaseConfig().configureMySQL()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,7 +51,7 @@ class LogInVC: UIViewController {
             return
         }
         
-        TasksProvider().loadTasks (_userName: userNameTextField.text!) { tasks in
+        TasksProvider().loadUser(_userName: userNameTextField.text!) { tasks in
             self.tasks = tasks
             print(tasks.count)
             
@@ -75,17 +75,17 @@ class LogInVC: UIViewController {
         }
     }
  
-    private func configureMySQL() {
-        
-        let user = OHMySQLUser(userName: "oktat", password: "corvin2019", serverName: "mysql.nethely.hu", dbName: "oktat", port: 3306, socket: "/Applications/MAMP/tmp/mysql/mysql.sock")
-        let coordinator = OHMySQLStoreCoordinator(user: user!)
-        coordinator.encoding = .UTF8MB4
-        coordinator.connect()
-        
-        let context = OHMySQLQueryContext()
-        context.storeCoordinator = coordinator
-        OHMySQLContainer.shared.mainQueryContext = context
-    }
+//    private func configureMySQL() {
+//
+//        let user = OHMySQLUser(userName: "oktat", password: "corvin2019", serverName: "mysql.nethely.hu", dbName: "oktat", port: 3306, socket: "/Applications/MAMP/tmp/mysql/mysql.sock")
+//        let coordinator = OHMySQLStoreCoordinator(user: user!)
+//        coordinator.encoding = .UTF8MB4
+//        coordinator.connect()
+//
+//        let context = OHMySQLQueryContext()
+//        context.storeCoordinator = coordinator
+//        OHMySQLContainer.shared.mainQueryContext = context
+//    }
 
     func displayMessage(userMessage:String) -> Void {
         DispatchQueue.main.async {
