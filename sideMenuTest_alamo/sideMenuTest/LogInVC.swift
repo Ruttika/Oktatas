@@ -13,7 +13,7 @@ class LogInVC: UIViewController {
    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    private var tasks = [Task]()
+    private var tasks = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

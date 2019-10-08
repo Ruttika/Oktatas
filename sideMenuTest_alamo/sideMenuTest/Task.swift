@@ -10,7 +10,7 @@ import Foundation
 
 import OHMySQL
 
-class Task: NSObject, OHMappingProtocol {
+class User: NSObject, OHMappingProtocol {
     
     @objc var user_id: NSNumber?
     @objc var user_name: String?

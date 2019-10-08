@@ -11,7 +11,7 @@ import OHMySQL
 
 class TasksProvider {
     
-    func loadTasks(_userName: String, completion: @escaping ([Task]) -> ()) {
+    func loadTasks(_userName: String, completion: @escaping ([User]) -> ()) {
         print(_userName)
         let query = OHMySQLQueryRequestFactory.select("user", condition: "user_name = '\(_userName)'")
         let response = try? OHMySQLContainer.shared.mainQueryContext?.executeQueryRequestAndFetchResult(query)
@@ -21,9 +21,9 @@ class TasksProvider {
             return
         }
         
-        var tasks = [Task]()
+        var tasks = [User]()
         for taskResponse in responseObject {
-            let task = Task()
+            let task = User()
             task.map(fromResponse: taskResponse)
             tasks.append(task)
         }
