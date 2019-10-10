@@ -26,20 +26,24 @@ class UserDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         DatabaseConfig().configureMySQL()
-        var fos = 116753670
-        
+        updateUserDetailsUI()
     }
-    @IBAction func buttonpush(_ sender: Any) {
+    
+    func updateUserDetailsUI() {
         
         TasksProvider().loadUserDetails { tasks in
             self.tasks = tasks
-            print(tasks.count)
-            
             
             self.fullNameLbl.text = tasks[0].student_full_name ?? ""
-            self.tajLbl.text = NSString(tasks[0].taj)
-            
-            
+            let taj = Int(tasks[0].taj!)
+            self.tajLbl.text = String(taj)
+            self.birthPlaceLbl.text = tasks[0].birth_place
+            self.homeAddressLbl.text = tasks[0].home_address
+            self.mothersNameLbl.text = tasks[0].mothers_name
+            let phoneNumberTmp = Int(tasks[0].phone_number!)
+            self.phoneNumberLbl.text = String(phoneNumberTmp)
+            self.fullNameLbl.text = tasks[0].student_full_name
+            self.emailLbl.text = tasks[0].email
         }
     }
 }
