@@ -11,6 +11,7 @@
 		C20340FD21AB2C5400363725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C20340FB21AB2C5400363725 /* Main.storyboard */; };
 		C20340FF21AB2C5E00363725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C20340FE21AB2C5E00363725 /* Assets.xcassets */; };
 		C203410221AB2C5E00363725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C203410021AB2C5E00363725 /* LaunchScreen.storyboard */; };
+		C21A7B25235266290056CA4F /* MoodleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A7B24235266290056CA4F /* MoodleViewController.swift */; };
 		C220FBAE2276EB5E00665985 /* FileTablteViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220FBAD2276EB5E00665985 /* FileTablteViewVC.swift */; };
 		C220FBB02276ECB700665985 /* FileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220FBAF2276ECB700665985 /* FileCell.swift */; };
 		C2248B83222179E500AD2176 /* AdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2248B82222179E500AD2176 /* AdScreen.swift */; };
@@ -40,6 +41,7 @@
 		C20340FE21AB2C5E00363725 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C203410121AB2C5E00363725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C203410321AB2C5E00363725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C21A7B24235266290056CA4F /* MoodleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodleViewController.swift; sourceTree = "<group>"; };
 		C220FBAD2276EB5E00665985 /* FileTablteViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTablteViewVC.swift; sourceTree = "<group>"; };
 		C220FBAF2276ECB700665985 /* FileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCell.swift; sourceTree = "<group>"; };
 		C2248B82222179E500AD2176 /* AdScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdScreen.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				C28D49C4234D0EA100871FEA /* UserDetails.swift */,
 				C28D49C6234D12B100871FEA /* DatabaseConfig.swift */,
 				C28D49C8234D152100871FEA /* UserDetailsViewController.swift */,
+				C21A7B24235266290056CA4F /* MoodleViewController.swift */,
 			);
 			path = sideMenuTest;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				C2248BA52221A2E600AD2176 /* MenuVC.swift in Sources */,
 				C2594D7E2275E5160019E441 /* Files.swift in Sources */,
 				C2F6BCA2234106160092FA15 /* User.swift in Sources */,
+				C21A7B25235266290056CA4F /* MoodleViewController.swift in Sources */,
 				C2248BA72221B43100AD2176 /* ScheduleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
