@@ -50,4 +50,25 @@ class TasksProvider {
         
         completion(tasks)
     }
+    
+    func loadPushMessage(completion: @escaping ([PushMessage]) -> ()) {
+
+        let query = OHMySQLQueryRequestFactory.select("push_notice", condition: nil)
+        let response = try? OHMySQLContainer.shared.mainQueryContext?.executeQueryRequestAndFetchResult(query)
+        
+        guard let responseObject = response as? [[String : Any]] else {
+            completion([])
+            return
+        }
+        
+        var tasks = [PushMessage]()
+        for taskResponse in responseObject {
+            let task = PushMessage()
+            task.map(fromResponse: taskResponse)
+            tasks.append(task)
+        }
+        
+        completion(tasks)
+    }
+    
 }
