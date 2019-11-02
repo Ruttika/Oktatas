@@ -46,4 +46,12 @@ class UserDetailsViewController: UIViewController {
             self.emailLbl.text = tasks[0].email
         }
     }
+    @IBAction func kecske(_ sender: Any) {
+        performSegue(withIdentifier: "adVC", sender: nil)
+    }
+    
+    @IBAction func pushednotice(_ sender: Any) {
+        PushMessageTask().getPushMessage()
+    }
+    
 }

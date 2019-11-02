@@ -26,6 +26,7 @@
 		C2594D7E2275E5160019E441 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2594D7D2275E5160019E441 /* Files.swift */; };
 		C2594D802275FEB80019E441 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2594D7F2275FEB80019E441 /* MessageCell.swift */; };
 		C2594D82227632B80019E441 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2594D81227632B80019E441 /* ClassCell.swift */; };
+		C28127A823579AAF00DF2507 /* PushMessageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28127A723579AAF00DF2507 /* PushMessageTask.swift */; };
 		C28D49C5234D0EA100871FEA /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C4234D0EA100871FEA /* UserDetails.swift */; };
 		C28D49C7234D12B100871FEA /* DatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C6234D12B100871FEA /* DatabaseConfig.swift */; };
 		C28D49C9234D152100871FEA /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C8234D152100871FEA /* UserDetailsViewController.swift */; };
@@ -59,6 +60,7 @@
 		C2594D7D2275E5160019E441 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		C2594D7F2275FEB80019E441 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		C2594D81227632B80019E441 /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
+		C28127A723579AAF00DF2507 /* PushMessageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushMessageTask.swift; sourceTree = "<group>"; };
 		C28D49C4234D0EA100871FEA /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		C28D49C6234D12B100871FEA /* DatabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConfig.swift; sourceTree = "<group>"; };
 		C28D49C8234D152100871FEA /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
@@ -132,9 +134,10 @@
 				C28D49C6234D12B100871FEA /* DatabaseConfig.swift */,
 				C28D49C8234D152100871FEA /* UserDetailsViewController.swift */,
 				C21A7B24235266290056CA4F /* MoodleViewController.swift */,
-				C2168E622354F89200A014F2 /* PushMessage.swift */,
 				C2168E642354FD3E00A014F2 /* PushNoticeViewController.swift */,
 				C2168E68235503B500A014F2 /* HomeViewController.swift */,
+				C2168E622354F89200A014F2 /* PushMessage.swift */,
+				C28127A723579AAF00DF2507 /* PushMessageTask.swift */,
 			);
 			path = sideMenuTest;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				C28D49C9234D152100871FEA /* UserDetailsViewController.swift in Sources */,
 				C2248BA32221990900AD2176 /* LogInVC.swift in Sources */,
 				C220FBAE2276EB5E00665985 /* FileTablteViewVC.swift in Sources */,
+				C28127A823579AAF00DF2507 /* PushMessageTask.swift in Sources */,
 				C2594D7C2275E4210019E441 /* Message.swift in Sources */,
 				C2248B83222179E500AD2176 /* AdScreen.swift in Sources */,
 				C2168E632354F89200A014F2 /* PushMessage.swift in Sources */,

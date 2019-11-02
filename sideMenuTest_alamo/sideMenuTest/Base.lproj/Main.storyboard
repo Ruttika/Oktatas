@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fe1-HC-QAZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rWv-1t-ti9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -62,7 +62,7 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <segue destination="RE5-oC-fY2" kind="presentation" id="z4n-ai-sSC"/>
+                                            <segue destination="RE5-oC-fY2" kind="presentation" modalPresentationStyle="overFullScreen" id="z4n-ai-sSC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -585,30 +585,56 @@
             </objects>
             <point key="canvasLocation" x="-161" y="-1252"/>
         </scene>
-        <!--View Controller-->
+        <!--Push Notice View Controller-->
         <scene sceneID="2do-cE-b8Q">
             <objects>
-                <viewController id="rK4-kP-TR5" sceneMemberID="viewController">
+                <viewController id="rK4-kP-TR5" customClass="PushNoticeViewController" customModule="sideMenuTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="spatial" id="sXx-9v-g1l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAO-93-ax8">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <action selector="dismissBtnPushed:" destination="rK4-kP-TR5" eventType="touchUpInside" id="cyU-yp-jTF"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3CS-lQ-Waj">
                                 <rect key="frame" x="41.5" y="20" width="292" height="66"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Izr-Sk-NQa">
+                                        <rect key="frame" x="9" y="9" width="274" height="48"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.97680455450000003" green="0.54924748130000001" blue="0.80313504999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Izr-Sk-NQa" secondAttribute="trailing" constant="9" id="1BA-Ek-C2J"/>
+                                    <constraint firstAttribute="bottom" secondItem="Izr-Sk-NQa" secondAttribute="bottom" constant="9" id="BCp-Nz-RFH"/>
                                     <constraint firstAttribute="height" constant="66" id="GyG-pZ-oCk"/>
+                                    <constraint firstItem="Izr-Sk-NQa" firstAttribute="leading" secondItem="3CS-lQ-Waj" secondAttribute="leading" constant="9" id="ZtY-dA-kTz"/>
+                                    <constraint firstItem="Izr-Sk-NQa" firstAttribute="top" secondItem="3CS-lQ-Waj" secondAttribute="top" constant="9" id="m2D-ms-CVg"/>
                                     <constraint firstAttribute="width" constant="292" id="sTV-7j-M1P"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="aAO-93-ax8" firstAttribute="top" secondItem="3CS-lQ-Waj" secondAttribute="bottom" constant="-66" id="HB5-h9-rqp"/>
                             <constraint firstItem="3CS-lQ-Waj" firstAttribute="top" secondItem="b8b-Eh-cdZ" secondAttribute="top" id="Kuy-Rt-EDd"/>
+                            <constraint firstItem="aAO-93-ax8" firstAttribute="leading" secondItem="b8b-Eh-cdZ" secondAttribute="leading" id="LjT-uO-acf"/>
                             <constraint firstItem="3CS-lQ-Waj" firstAttribute="centerX" secondItem="sXx-9v-g1l" secondAttribute="centerX" id="bC4-gw-qgF"/>
+                            <constraint firstItem="b8b-Eh-cdZ" firstAttribute="bottom" secondItem="aAO-93-ax8" secondAttribute="bottom" id="cG9-Mx-iaJ"/>
+                            <constraint firstItem="b8b-Eh-cdZ" firstAttribute="trailing" secondItem="aAO-93-ax8" secondAttribute="trailing" id="iDZ-2E-amB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b8b-Eh-cdZ"/>
                     </view>
+                    <connections>
+                        <outlet property="pushNoticeText" destination="Izr-Sk-NQa" id="pQC-fB-6qW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixI-5t-CwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -836,13 +862,39 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llV-yX-Q2R">
+                                <rect key="frame" x="329" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="9GV-2s-rGd"/>
+                                    <constraint firstAttribute="height" constant="30" id="tAe-9O-hes"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="kecske:" destination="qqf-AY-F3n" eventType="touchUpInside" id="WSv-O6-yHu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2R0-6m-Qjo">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="bqg-fp-S17"/>
+                                    <constraint firstAttribute="height" constant="30" id="qOg-1t-mSb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pushednotice:" destination="qqf-AY-F3n" eventType="touchUpInside" id="VqQ-oK-oZK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99966853860000005" green="0.80700314039999999" blue="0.86946207279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1a0-TO-kDD" firstAttribute="top" secondItem="i1v-Yl-3M4" secondAttribute="top" constant="177" id="F6p-se-fzo"/>
                             <constraint firstItem="i1v-Yl-3M4" firstAttribute="bottom" secondItem="1a0-TO-kDD" secondAttribute="bottom" constant="12" id="Ilf-SL-Idf"/>
+                            <constraint firstItem="llV-yX-Q2R" firstAttribute="top" secondItem="i1v-Yl-3M4" secondAttribute="top" id="KEA-Fb-TPS"/>
                             <constraint firstItem="i1v-Yl-3M4" firstAttribute="trailing" secondItem="1a0-TO-kDD" secondAttribute="trailing" constant="12" id="Mmi-kR-IMw"/>
+                            <constraint firstItem="2R0-6m-Qjo" firstAttribute="leading" secondItem="i1v-Yl-3M4" secondAttribute="leading" constant="16" id="QBp-UG-ZGI"/>
                             <constraint firstItem="1a0-TO-kDD" firstAttribute="leading" secondItem="i1v-Yl-3M4" secondAttribute="leading" constant="12" id="WeR-0R-efU"/>
+                            <constraint firstItem="llV-yX-Q2R" firstAttribute="trailing" secondItem="i1v-Yl-3M4" secondAttribute="trailing" id="jBa-Jr-K0s"/>
+                            <constraint firstItem="2R0-6m-Qjo" firstAttribute="top" secondItem="i1v-Yl-3M4" secondAttribute="top" id="wVq-Wk-WJv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i1v-Yl-3M4"/>
                     </view>
@@ -856,6 +908,7 @@
                         <outlet property="mothersNameLbl" destination="HmU-8c-1t6" id="TUD-o2-Na7"/>
                         <outlet property="phoneNumberLbl" destination="VjF-9o-Q4J" id="7a6-c8-YGt"/>
                         <outlet property="tajLbl" destination="KKS-KI-Uzw" id="XF3-Ak-hV7"/>
+                        <segue destination="rK4-kP-TR5" kind="presentation" identifier="adVC" modalPresentationStyle="overCurrentContext" id="Lp7-bl-aDu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87b-ja-Tuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -911,7 +964,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="rK4-kP-TR5" kind="presentation" modalPresentationStyle="overCurrentContext" id="8ol-5o-quo"/>
+                                    <segue destination="rK4-kP-TR5" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="8ol-5o-quo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1009,4 +1062,7 @@
         <image name="open-book" width="32" height="32"/>
         <image name="user-silhouette" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Lp7-bl-aDu"/>
+    </inferredMetricsTieBreakers>
 </document>

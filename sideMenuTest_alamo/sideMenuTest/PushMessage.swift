@@ -11,14 +11,18 @@ import OHMySQL
 
 class PushMessage: NSObject, OHMappingProtocol {
     
+    @objc var id: NSNumber?
+    @objc var schedule_plan_data_id: NSNumber?
     @objc var date: NSDate?
-    @objc var message: String?
+    @objc var message: NSString?
 
     
     
     func mappingDictionary() -> [AnyHashable : Any]! {
-        return ["user_id": "user_id",
-                "user_name": "user_name",]
+        return ["id" : "id",
+                "date" : "date",
+                "schedule_plan_data_id" : "schedule_plan_data_id",
+                "message" : "message"]
     }
     
     func mySQLTable() -> String! {

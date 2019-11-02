@@ -8,16 +8,18 @@
 
 import UIKit
 
+var firstOpen = true
 class HomeViewController: UIViewController {
 
     
-    var firstOpen = true
+    
     
     override func viewDidAppear(_ animated: Bool) {
+        
         if (firstOpen == true) {
             
             firstOpen = false
-            //performSegue(withIdentifier: "adVC", sender: nil)
+            performSegue(withIdentifier: "adVC", sender: nil)
         }
         
     }

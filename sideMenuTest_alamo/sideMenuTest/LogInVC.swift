@@ -14,6 +14,7 @@ class LogInVC: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     private var tasks = [User]()
+    private var push = [PushMessage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,6 @@ class LogInVC: UIViewController {
         let userName = userNameTextField.text
         let userPassword = passwordTextField.text
         
-
         if (userName?.isEmpty)! || (userPassword?.isEmpty)! {
             displayMessage(userMessage: "Mindkét mezőt ki kell tölteni!")
             return
@@ -73,6 +73,8 @@ class LogInVC: UIViewController {
             self.displayMessage(userMessage: "Hibás adatok!")
             return
         }
+        
+
     }
  
 //    private func configureMySQL() {

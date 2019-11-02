@@ -33,6 +33,7 @@ class UserDetails: NSObject, OHMappingProtocol {
                 "email" : "email"
         
         ]
+        
     }
     
     func mySQLTable() -> String! {

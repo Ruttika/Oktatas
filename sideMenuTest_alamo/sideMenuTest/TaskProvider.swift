@@ -54,6 +54,7 @@ class TasksProvider {
     func loadPushMessage(completion: @escaping ([PushMessage]) -> ()) {
 
         let query = OHMySQLQueryRequestFactory.select("push_notice", condition: nil)
+        //let query = OHMySQLQueryRequestFactory.selectFirst("push_notice", condition: nil, orderBy: ["date"], ascending: true)
         let response = try? OHMySQLContainer.shared.mainQueryContext?.executeQueryRequestAndFetchResult(query)
         
         guard let responseObject = response as? [[String : Any]] else {
@@ -70,5 +71,4 @@ class TasksProvider {
         
         completion(tasks)
     }
-    
 }
