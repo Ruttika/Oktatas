@@ -17,6 +17,8 @@ class PushNoticeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         TasksProvider().loadPushMessage{ tasks in
             //self.pushNoticeText.text = String("\(tasks[1].message)")
             //print(String(tasks[0].message!))
@@ -31,14 +33,17 @@ class PushNoticeViewController: UIViewController {
             else {
                 print("nul")
             }
-            var fos = String("\(tasks[1].message)")
+            var fos = String("\(tasks[0].message)")
             //print(String("\(tasks[1].date)"))
             
             self.pushNoticeText.text = self.hexToStr(text: fos)
             print(self.hexToStr(text: fos))
             print(tasks.count)
+            
+            
         }
-        
+        var timer: Timer!
+        timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(dismissView), userInfo: nil, repeats: false)
         
     }
     
@@ -59,6 +64,13 @@ class PushNoticeViewController: UIViewController {
         
         return String(characters)
     }
+    
+    @objc func dismissView() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+
+    
 
 }
 

@@ -15,17 +15,13 @@
 		C2168E652354FD3E00A014F2 /* PushNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2168E642354FD3E00A014F2 /* PushNoticeViewController.swift */; };
 		C2168E69235503B500A014F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2168E68235503B500A014F2 /* HomeViewController.swift */; };
 		C21A7B25235266290056CA4F /* MoodleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21A7B24235266290056CA4F /* MoodleViewController.swift */; };
-		C220FBAE2276EB5E00665985 /* FileTablteViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220FBAD2276EB5E00665985 /* FileTablteViewVC.swift */; };
-		C220FBB02276ECB700665985 /* FileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C220FBAF2276ECB700665985 /* FileCell.swift */; };
+		C21B682E236F1C62000A16DB /* Modul.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21B682D236F1C62000A16DB /* Modul.swift */; };
+		C21B6832236F7FB0000A16DB /* ScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21B6831236F7FB0000A16DB /* ScheduleCell.swift */; };
+		C21B6834236F80C0000A16DB /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21B6833236F80C0000A16DB /* Schedule.swift */; };
 		C2248B83222179E500AD2176 /* AdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2248B82222179E500AD2176 /* AdScreen.swift */; };
 		C2248BA32221990900AD2176 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2248BA22221990900AD2176 /* LogInVC.swift */; };
 		C2248BA52221A2E600AD2176 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2248BA42221A2E600AD2176 /* MenuVC.swift */; };
-		C2248BA72221B43100AD2176 /* ScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2248BA62221B43100AD2176 /* ScheduleVC.swift */; };
-		C2594D7A2275E40D0019E441 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2594D792275E40D0019E441 /* Class.swift */; };
-		C2594D7C2275E4210019E441 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2594D7B2275E4210019E441 /* Message.swift */; };
-		C2594D7E2275E5160019E441 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2594D7D2275E5160019E441 /* Files.swift */; };
-		C2594D802275FEB80019E441 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2594D7F2275FEB80019E441 /* MessageCell.swift */; };
-		C2594D82227632B80019E441 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2594D81227632B80019E441 /* ClassCell.swift */; };
+		C254B99E236DF7F7007A86BB /* PushNoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C254B99D236DF7F7007A86BB /* PushNoticeCell.swift */; };
 		C28127A823579AAF00DF2507 /* PushMessageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28127A723579AAF00DF2507 /* PushMessageTask.swift */; };
 		C28D49C5234D0EA100871FEA /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C4234D0EA100871FEA /* UserDetails.swift */; };
 		C28D49C7234D12B100871FEA /* DatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C6234D12B100871FEA /* DatabaseConfig.swift */; };
@@ -49,17 +45,13 @@
 		C2168E642354FD3E00A014F2 /* PushNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNoticeViewController.swift; sourceTree = "<group>"; };
 		C2168E68235503B500A014F2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C21A7B24235266290056CA4F /* MoodleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodleViewController.swift; sourceTree = "<group>"; };
-		C220FBAD2276EB5E00665985 /* FileTablteViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTablteViewVC.swift; sourceTree = "<group>"; };
-		C220FBAF2276ECB700665985 /* FileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCell.swift; sourceTree = "<group>"; };
+		C21B682D236F1C62000A16DB /* Modul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modul.swift; sourceTree = "<group>"; };
+		C21B6831236F7FB0000A16DB /* ScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCell.swift; sourceTree = "<group>"; };
+		C21B6833236F80C0000A16DB /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		C2248B82222179E500AD2176 /* AdScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdScreen.swift; sourceTree = "<group>"; };
 		C2248BA22221990900AD2176 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		C2248BA42221A2E600AD2176 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
-		C2248BA62221B43100AD2176 /* ScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVC.swift; sourceTree = "<group>"; };
-		C2594D792275E40D0019E441 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
-		C2594D7B2275E4210019E441 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		C2594D7D2275E5160019E441 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
-		C2594D7F2275FEB80019E441 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
-		C2594D81227632B80019E441 /* ClassCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
+		C254B99D236DF7F7007A86BB /* PushNoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNoticeCell.swift; sourceTree = "<group>"; };
 		C28127A723579AAF00DF2507 /* PushMessageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushMessageTask.swift; sourceTree = "<group>"; };
 		C28D49C4234D0EA100871FEA /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		C28D49C6234D12B100871FEA /* DatabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConfig.swift; sourceTree = "<group>"; };
@@ -111,35 +103,63 @@
 		C20340F621AB2C5400363725 /* sideMenuTest */ = {
 			isa = PBXGroup;
 			children = (
+				C254B99C236DF32C007A86BB /* Cells */,
+				C254B99B236DEE48007A86BB /* Database */,
+				C254B99A236DEE0D007A86BB /* Data */,
+				C254B999236DE88B007A86BB /* Controllers */,
 				C20340F721AB2C5400363725 /* AppDelegate.swift */,
 				C20340FB21AB2C5400363725 /* Main.storyboard */,
 				C20340FE21AB2C5E00363725 /* Assets.xcassets */,
 				C203410021AB2C5E00363725 /* LaunchScreen.storyboard */,
 				C203410321AB2C5E00363725 /* Info.plist */,
 				C2C9815821BD7403007B98F5 /* DesignableView.swift */,
-				C2248B82222179E500AD2176 /* AdScreen.swift */,
-				C2248BA22221990900AD2176 /* LogInVC.swift */,
-				C2248BA42221A2E600AD2176 /* MenuVC.swift */,
-				C2248BA62221B43100AD2176 /* ScheduleVC.swift */,
-				C2594D792275E40D0019E441 /* Class.swift */,
-				C2594D7B2275E4210019E441 /* Message.swift */,
-				C2594D7D2275E5160019E441 /* Files.swift */,
-				C2594D7F2275FEB80019E441 /* MessageCell.swift */,
-				C2594D81227632B80019E441 /* ClassCell.swift */,
-				C220FBAD2276EB5E00665985 /* FileTablteViewVC.swift */,
-				C220FBAF2276ECB700665985 /* FileCell.swift */,
-				C2F6BCA1234106160092FA15 /* User.swift */,
-				C2F6BCA3234107560092FA15 /* TaskProvider.swift */,
-				C28D49C4234D0EA100871FEA /* UserDetails.swift */,
-				C28D49C6234D12B100871FEA /* DatabaseConfig.swift */,
-				C28D49C8234D152100871FEA /* UserDetailsViewController.swift */,
-				C21A7B24235266290056CA4F /* MoodleViewController.swift */,
-				C2168E642354FD3E00A014F2 /* PushNoticeViewController.swift */,
-				C2168E68235503B500A014F2 /* HomeViewController.swift */,
-				C2168E622354F89200A014F2 /* PushMessage.swift */,
 				C28127A723579AAF00DF2507 /* PushMessageTask.swift */,
 			);
 			path = sideMenuTest;
+			sourceTree = "<group>";
+		};
+		C254B999236DE88B007A86BB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2248BA22221990900AD2176 /* LogInVC.swift */,
+				C2168E68235503B500A014F2 /* HomeViewController.swift */,
+				C2248BA42221A2E600AD2176 /* MenuVC.swift */,
+				C2248B82222179E500AD2176 /* AdScreen.swift */,
+				C28D49C8234D152100871FEA /* UserDetailsViewController.swift */,
+				C21A7B24235266290056CA4F /* MoodleViewController.swift */,
+				C2168E642354FD3E00A014F2 /* PushNoticeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C254B99A236DEE0D007A86BB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C2F6BCA1234106160092FA15 /* User.swift */,
+				C28D49C4234D0EA100871FEA /* UserDetails.swift */,
+				C2168E622354F89200A014F2 /* PushMessage.swift */,
+				C21B682D236F1C62000A16DB /* Modul.swift */,
+				C21B6833236F80C0000A16DB /* Schedule.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C254B99B236DEE48007A86BB /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				C2F6BCA3234107560092FA15 /* TaskProvider.swift */,
+				C28D49C6234D12B100871FEA /* DatabaseConfig.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		C254B99C236DF32C007A86BB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C254B99D236DF7F7007A86BB /* PushNoticeCell.swift */,
+				C21B6831236F7FB0000A16DB /* ScheduleCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F5783E92AD99EE80012D9DDF /* Pods */ = {
@@ -263,28 +283,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C9815921BD7403007B98F5 /* DesignableView.swift in Sources */,
+				C254B99E236DF7F7007A86BB /* PushNoticeCell.swift in Sources */,
 				C2168E652354FD3E00A014F2 /* PushNoticeViewController.swift in Sources */,
 				C28D49C5234D0EA100871FEA /* UserDetails.swift in Sources */,
+				C21B6832236F7FB0000A16DB /* ScheduleCell.swift in Sources */,
 				C28D49C7234D12B100871FEA /* DatabaseConfig.swift in Sources */,
-				C2594D802275FEB80019E441 /* MessageCell.swift in Sources */,
-				C220FBB02276ECB700665985 /* FileCell.swift in Sources */,
 				C20340F821AB2C5400363725 /* AppDelegate.swift in Sources */,
 				C2168E69235503B500A014F2 /* HomeViewController.swift in Sources */,
-				C2594D82227632B80019E441 /* ClassCell.swift in Sources */,
 				C2F6BCA4234107560092FA15 /* TaskProvider.swift in Sources */,
 				C28D49C9234D152100871FEA /* UserDetailsViewController.swift in Sources */,
 				C2248BA32221990900AD2176 /* LogInVC.swift in Sources */,
-				C220FBAE2276EB5E00665985 /* FileTablteViewVC.swift in Sources */,
 				C28127A823579AAF00DF2507 /* PushMessageTask.swift in Sources */,
-				C2594D7C2275E4210019E441 /* Message.swift in Sources */,
 				C2248B83222179E500AD2176 /* AdScreen.swift in Sources */,
 				C2168E632354F89200A014F2 /* PushMessage.swift in Sources */,
-				C2594D7A2275E40D0019E441 /* Class.swift in Sources */,
 				C2248BA52221A2E600AD2176 /* MenuVC.swift in Sources */,
-				C2594D7E2275E5160019E441 /* Files.swift in Sources */,
 				C2F6BCA2234106160092FA15 /* User.swift in Sources */,
+				C21B6834236F80C0000A16DB /* Schedule.swift in Sources */,
 				C21A7B25235266290056CA4F /* MoodleViewController.swift in Sources */,
-				C2248BA72221B43100AD2176 /* ScheduleVC.swift in Sources */,
+				C21B682E236F1C62000A16DB /* Modul.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
