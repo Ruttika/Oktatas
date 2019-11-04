@@ -15,6 +15,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var scheduleTableView: UITableView!
     
     var messagesList: [PushMessage] = []
+    var scheduleList: [Schedule] = []
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -31,7 +32,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         pushNoticeTableView.delegate = self
         pushNoticeTableView.dataSource = self
-        
         scheduleTableView.dataSource = self
         scheduleTableView.delegate = self
         
@@ -39,6 +39,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.messagesList = tasks
         }
         
+        TasksProvider().loadSchedule{ tasks in
+            self.scheduleList = tasks
+           //print(tasks[1].modul_name)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -46,23 +50,54 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messagesList.count
+        var numberOfRow: Int!
+        if (tableView == pushNoticeTableView ) {
+            numberOfRow = messagesList.count
+        } else if (tableView == scheduleTableView ) {
+            numberOfRow = scheduleList.count
+        }
+        return numberOfRow
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "pushNoticeCell", for: indexPath) as? PushNoticeCell {
+        var cellReturn = UITableViewCell()
+        
+        switch tableView {
+        case pushNoticeTableView:
             
-            let message = messagesList[indexPath.row]
-
-            cell.configureTableViewCell(pushmessage: message)
-            //cell.transform = CGAffineTransform(rotationAngle: (.pi))
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "pushNoticeCell", for: indexPath) as? PushNoticeCell {
+                
+                let message = messagesList[indexPath.row]
+                
+                cell.configureTableViewCell(pushmessage: message)
+                //cell.transform = CGAffineTransform(rotationAngle: (.pi))
+                
+                 cellReturn = cell
+            }else {
+                
+                cellReturn = UITableViewCell()
+            }
+        case scheduleTableView:
             
-            return cell
-        }else {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath) as? ScheduleCell {
+                
+                let schedule = scheduleList[indexPath.row]
+                
+                cell.configureTableViewCell(schedule: schedule)
+                //cell.transform = CGAffineTransform(rotationAngle: (.pi))
+                
+                cellReturn = cell
+            }else {
+                
+                cellReturn = UITableViewCell()
+            }
             
-            return UITableViewCell()
+        default:
+            print("Baj van moni")
         }
+        
+        return cellReturn
     }
     
     

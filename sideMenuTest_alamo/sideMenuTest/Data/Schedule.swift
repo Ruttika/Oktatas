@@ -15,8 +15,8 @@ class Schedule: NSObject, OHMappingProtocol {
     @objc var schedule_plan_data_id: NSNumber?
     @objc var date: String?
     @objc var modul_name: String?
-    @objc var mmodul_start_hour: NSNumber?
-    @objc var mondul_end_hour: NSNumber?
+    @objc var modul_start_hour: NSNumber?
+    @objc var modul_end_hour: NSNumber?
     
     
     
@@ -25,8 +25,8 @@ class Schedule: NSObject, OHMappingProtocol {
                 "schedule_plan_data_id" : "schedule_plan_data_id",
                 "date" : "date",
                 "modul_name" : "modul_name",
-                "mmodul_start_hour" : "mmodul_start_hour",
-                "mondul_end_hour" : "mondul_end_hour"]
+                "modul_start_hour" : "modul_start_hour",
+                "modul_end_hour" : "modul_end_hour"]
     }
     
     func mySQLTable() -> String! {

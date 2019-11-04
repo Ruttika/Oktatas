@@ -29,8 +29,11 @@ class ScheduleCell: UITableViewCell {
     
     func configureTableViewCell(schedule: Schedule ) {
         
-
-        
-        
+        modulNameLbl.text = schedule.modul_name
+        let startHour = Int(schedule.modul_start_hour!)
+        startLbl.text = String(startHour)
+        let endHour = Int(schedule.modul_end_hour!)
+        endLbl.text = String(endHour)
+        dateLbl.text = schedule.date
     }
 }
