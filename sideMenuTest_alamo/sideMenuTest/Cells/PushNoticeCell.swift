@@ -29,6 +29,7 @@ class PushNoticeCell: UITableViewCell {
 
         let message = String("\(pushmessage.message)")
         var kek = self.hexToStr(text: message)
+        //var kek = message
         print(kek)
         self.messageLbl.text = kek
 

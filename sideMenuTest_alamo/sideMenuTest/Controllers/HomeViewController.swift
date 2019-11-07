@@ -43,6 +43,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.scheduleList = tasks
            //print(tasks[1].modul_name)
         }
+        
+//        TasksProvider().loadPushMessage{ tasks in //NEED TO TEST IT
+//            let lastPushMessage = String("\(tasks.message)")
+//
+//            let pushNotice = TextDecoder().hexToStr(text: lastPushMessage)
+//
+//
+//            if let currentPushMessage = UserDefaults.standard.object(forKey: "pushNotice") as? String {
+//                if currentPushMessage != pushNotice {
+//                    UserDefaults.standard.set(pushNotice, forKey: "pushNotice")
+//                    UserDefaults.standard.synchronize()
+//                }
+//            }
+//        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

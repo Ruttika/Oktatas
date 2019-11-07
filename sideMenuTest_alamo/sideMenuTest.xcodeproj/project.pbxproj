@@ -27,6 +27,7 @@
 		C28D49C7234D12B100871FEA /* DatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C6234D12B100871FEA /* DatabaseConfig.swift */; };
 		C28D49C9234D152100871FEA /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C8234D152100871FEA /* UserDetailsViewController.swift */; };
 		C2C9815921BD7403007B98F5 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C9815821BD7403007B98F5 /* DesignableView.swift */; };
+		C2E74357237360580037CA62 /* TextDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E74356237360580037CA62 /* TextDecoder.swift */; };
 		C2F6BCA2234106160092FA15 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F6BCA1234106160092FA15 /* User.swift */; };
 		C2F6BCA4234107560092FA15 /* TaskProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F6BCA3234107560092FA15 /* TaskProvider.swift */; };
 		C76E6791C92CFC80A6127323 /* Pods_sideMenuTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE064835C71602ED79704B7F /* Pods_sideMenuTest.framework */; };
@@ -57,6 +58,7 @@
 		C28D49C6234D12B100871FEA /* DatabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConfig.swift; sourceTree = "<group>"; };
 		C28D49C8234D152100871FEA /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		C2C9815821BD7403007B98F5 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		C2E74356237360580037CA62 /* TextDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDecoder.swift; sourceTree = "<group>"; };
 		C2F6BCA1234106160092FA15 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C2F6BCA3234107560092FA15 /* TaskProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProvider.swift; sourceTree = "<group>"; };
 		EE064835C71602ED79704B7F /* Pods_sideMenuTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sideMenuTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 				C203410321AB2C5E00363725 /* Info.plist */,
 				C2C9815821BD7403007B98F5 /* DesignableView.swift */,
 				C28127A723579AAF00DF2507 /* PushMessageTask.swift */,
+				C2E74356237360580037CA62 /* TextDecoder.swift */,
 			);
 			path = sideMenuTest;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				C2F6BCA4234107560092FA15 /* TaskProvider.swift in Sources */,
 				C28D49C9234D152100871FEA /* UserDetailsViewController.swift in Sources */,
 				C2248BA32221990900AD2176 /* LogInVC.swift in Sources */,
+				C2E74357237360580037CA62 /* TextDecoder.swift in Sources */,
 				C28127A823579AAF00DF2507 /* PushMessageTask.swift in Sources */,
 				C2248B83222179E500AD2176 /* AdScreen.swift in Sources */,
 				C2168E632354F89200A014F2 /* PushMessage.swift in Sources */,

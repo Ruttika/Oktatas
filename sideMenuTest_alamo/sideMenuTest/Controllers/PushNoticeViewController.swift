@@ -26,13 +26,7 @@ class PushNoticeViewController: UIViewController {
             
             //let message =  fos as! String
             //self.pushNoticeText.text = message
-           
-            if tasks[0].message != nil {
-                print("faszfej")
-            }
-            else {
-                print("nul")
-            }
+            
             var fos = String("\(tasks[0].message)")
             //print(String("\(tasks[1].date)"))
             
