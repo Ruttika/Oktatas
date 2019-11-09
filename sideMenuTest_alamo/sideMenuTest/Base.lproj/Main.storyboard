@@ -1067,12 +1067,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yV1-wv-Auh">
-                                <rect key="frame" x="5" y="20" width="46" height="30"/>
+                                <rect key="frame" x="5" y="20" width="57" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="KfZ-Bb-fzF"/>
+                                    <constraint firstAttribute="width" constant="57" id="KfZ-Bb-fzF"/>
                                     <constraint firstAttribute="height" constant="30" id="u7r-Cm-Dh8"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Kilépés"/>
                                 <connections>
                                     <action selector="update:" destination="rWv-1t-ti9" eventType="touchUpInside" id="gGb-Q9-nK5"/>
                                 </connections>

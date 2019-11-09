@@ -41,12 +41,10 @@ class PushNoticeViewController: UIViewController {
         
     }
     
-    
-    
-    
     @IBAction func dismissBtnPushed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
     func hexToStr(text: String) -> String {
         
         let regex = try! NSRegularExpression(pattern: "(0x)?([0-9A-Fa-f]{2})", options: .caseInsensitive)
@@ -62,9 +60,6 @@ class PushNoticeViewController: UIViewController {
     @objc func dismissView() {
         dismiss(animated: true, completion: nil)
     }
-    
-
-    
 
 }
 

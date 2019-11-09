@@ -37,17 +37,23 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         scheduleTableView.delegate = self
         
         if (firstOpen == false) {
-            TasksProvider().loadPushMessages{ tasks in
-                self.messagesList = tasks
-            }
-
-        
+            
             var actualUserScheduleId: NSNumber!
             TasksProvider().loadSchedulePlanData{ tasks in
                 
                 actualUserScheduleId = tasks[0].id
+                UserDefaults.standard.set(actualUserScheduleId, forKey: "actualID")
+                UserDefaults.standard.synchronize()
             }
-        
+            
+            TasksProvider().loadPushMessages{ tasks in
+                for task in tasks {
+                    if task.schedule_plan_data_id == actualUserScheduleId {
+                        self.messagesList.append(task)
+                    }
+                }
+            }
+
             TasksProvider().loadSchedule{ tasks in
                 
                 let date = Date()
@@ -61,22 +67,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     }
                 }
             }
+            TasksProvider().loadPushMessage{ tasks in //NEED TO TEST IT
+                print(tasks.count)
+                let lastPushMessage = String("\(tasks[0].message)")
+                
+                let pushNotice = TextDecoder().hexToStr(text: lastPushMessage)
+                
+                if let currentPushMessage = UserDefaults.standard.object(forKey: "pushNotice") as? String {
+                    print(currentPushMessage)
+                    if currentPushMessage != pushNotice {
+                        UserDefaults.standard.set(pushNotice, forKey: "pushNotice")
+                        UserDefaults.standard.synchronize()
+                    }
+                }
+            }
         }
-
-        
-//        TasksProvider().loadPushMessage{ tasks in //NEED TO TEST IT
-//            let lastPushMessage = String("\(tasks.message)")
-//
-//            let pushNotice = TextDecoder().hexToStr(text: lastPushMessage)
-//
-//
-//            if let currentPushMessage = UserDefaults.standard.object(forKey: "pushNotice") as? String {
-//                if currentPushMessage != pushNotice {
-//                    UserDefaults.standard.set(pushNotice, forKey: "pushNotice")
-//                    UserDefaults.standard.synchronize()
-//                }
-//            }
-//        }
+        var timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(updateMessages), userInfo: nil, repeats: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -137,12 +143,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func update(_ sender: Any) {
         
-        TasksProvider().loadModul{ tasks in
-            print(tasks[1].modul_name ?? "")
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func updateMessages() {
+        messagesList.removeAll()
+        var id: NSNumber!
+        
+        if let password = UserDefaults.standard.object(forKey: "actualID") as? NSNumber{
+            id = password
         }
         
-        
+        TasksProvider().loadPushMessages{ tasks in
+            for task in tasks {
+                if task.schedule_plan_data_id == id {
+                    self.messagesList.append(task)
+                }
+            }
+        }
         pushNoticeTableView.reloadData()
-        scheduleTableView.reloadData()
     }
 }
