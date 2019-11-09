@@ -120,6 +120,7 @@ class TasksProvider {
         //let query = OHMySQLQueryRequestFactory.select("modul", condition: nil)
         //let query = OHMySQLQueryRequestFactory.selectFirst("push_notice", condition: nil, orderBy: ["date"], ascending: true)
         let query = OHMySQLQueryRequestFactory.joinType(OHJoinInner, fromTable: "schedule_plan", columnNames: ["id", "schedule_plan_data_id", "date", "modul_name", "modul_start_hour", "modul_end_hour"], joinOn: ["modul" : "modul.modul_id=schedule_plan.used_modul_id"])
+        
         let response = try? OHMySQLContainer.shared.mainQueryContext?.executeQueryRequestAndFetchResult(query)
         
         guard let responseObject = response as? [[String : Any]] else {

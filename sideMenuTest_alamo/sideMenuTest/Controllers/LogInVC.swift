@@ -8,6 +8,7 @@
 
 import UIKit
 import OHMySQL
+import Alamofire
 
 class LogInVC: UIViewController {
    
@@ -20,6 +21,7 @@ class LogInVC: UIViewController {
         super.viewDidLoad()
         
         DatabaseConfig().configureMySQL()
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,51 +45,8 @@ class LogInVC: UIViewController {
     
     @IBAction func logInBtn(_ sender: Any) {
         
-        let userName = userNameTextField.text
-        let userPassword = passwordTextField.text
-        
-        if (userName?.isEmpty)! || (userPassword?.isEmpty)! {
-            displayMessage(userMessage: "Mindkét mezőt ki kell tölteni!")
-            return
-        }
-        
-        TasksProvider().loadUser(_userName: userNameTextField.text!) { tasks in
-            self.tasks = tasks
-            print(tasks.count)
-            
-            for index in 0..<tasks.count {
-                print(tasks[index].user_name ?? ""," : ", tasks[index].password ?? "" )
-            }
-            
-            //for index in 0..<tasks.count {
-                
-            if (userName == tasks[0].user_name ?? "") && (userPassword == tasks[0].password ?? "" ) {
-                    
-                UserDefaults.standard.set(self.userNameTextField.text, forKey: "userName")
-                UserDefaults.standard.set(self.passwordTextField.text, forKey: "password")
-                UserDefaults.standard.synchronize()
-                    
-                self.performSegue(withIdentifier: "MenuVC", sender: nil)
-                }
-            //}
-            self.displayMessage(userMessage: "Hibás adatok!")
-            return
-        }
-        
-
+        logInRequest()
     }
- 
-//    private func configureMySQL() {
-//
-//        let user = OHMySQLUser(userName: "oktat", password: "corvin2019", serverName: "mysql.nethely.hu", dbName: "oktat", port: 3306, socket: "/Applications/MAMP/tmp/mysql/mysql.sock")
-//        let coordinator = OHMySQLStoreCoordinator(user: user!)
-//        coordinator.encoding = .UTF8MB4
-//        coordinator.connect()
-//
-//        let context = OHMySQLQueryContext()
-//        context.storeCoordinator = coordinator
-//        OHMySQLContainer.shared.mainQueryContext = context
-//    }
 
     func displayMessage(userMessage:String) -> Void {
         DispatchQueue.main.async {
@@ -101,6 +60,67 @@ class LogInVC: UIViewController {
             }
             alertController.addAction(OKAction)
             self.present(alertController, animated: true)
+        }
+    }
+    
+    func toBase62(password: String) -> String {
+        let codedString = password.data(using: String.Encoding.utf8)!.base64EncodedString()
+    
+        return codedString
+    }
+    
+    func fromBase64(password: String) -> String {
+        let codedString = Data(base64Encoded: password)!
+        let decodedString = String(data: codedString, encoding: .utf8)!
+        
+        return decodedString
+    }
+    
+    func logInRequest() {
+        
+        if (userNameTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
+            displayMessage(userMessage: "Mindkét mezőt ki kell tölteni!")
+            return
+        }
+        let userName = userNameTextField.text!
+        let password = toBase62(password: passwordTextField.text!)
+        
+        let parameters : Parameters = [
+            "userName" : userName,
+            "password" : password
+        ]
+    
+        var succesfullLogin = false
+        
+        Alamofire.request("http://oktat.narasoft.hu/php/DeviceLogin.php", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { (response) in
+            print(response)
+            if let dict = response.result.value as? Dictionary<String, AnyObject> {
+                if let course = dict["course"] as? String {
+
+                    UserDefaults.standard.set(course, forKey: "course")
+                    UserDefaults.standard.set(self.userNameTextField.text, forKey: "userName")
+                    UserDefaults.standard.set(self.passwordTextField.text, forKey: "password")
+                    UserDefaults.standard.synchronize()
+                    succesfullLogin = true
+                }
+                else {
+                    self.displayMessage(userMessage: "Hibás felhasználónév vagy jelszó!")
+                    return
+                }
+                
+                if let userId = dict["userId"] as? String {
+                    
+                    UserDefaults.standard.set(userId, forKey: "userId")
+                    UserDefaults.standard.synchronize()
+                }
+                else {
+                    self.displayMessage(userMessage: "Hibás felhasználónév vagy jelszó!")
+                    return
+                }
+            }
+            if succesfullLogin == true{
+                self.performSegue(withIdentifier: "MenuVC", sender: nil)
+            }
         }
     }
 }
