@@ -138,4 +138,29 @@ class TasksProvider {
         completion(tasks)
     }
     
+    func loadSchedulePlanData(completion: @escaping ([SchedulePlanData]) -> ()) {
+        var courseID: String!
+        if let course = UserDefaults.standard.object(forKey: "course") as? String {
+            courseID = course
+        }
+        print(courseID)
+        //let query = OHMySQLQueryRequestFactory.select("schedule_plan_data", condition: "course_id = '\(courseID ?? "")'") ez lenne a jó de nem lehet tesztelni....
+        let query = OHMySQLQueryRequestFactory.select("schedule_plan_data", condition: "course_id = 2")
+        let response = try? OHMySQLContainer.shared.mainQueryContext?.executeQueryRequestAndFetchResult(query)
+        
+        guard let responseObject = response as? [[String : Any]] else {
+            completion([])
+            return
+        }
+        
+        var tasks = [SchedulePlanData]()
+        for taskResponse in responseObject {
+            let task = SchedulePlanData()
+            task.map(fromResponse: taskResponse)
+            tasks.append(task)
+        }
+        
+        completion(tasks)
+    }
+    
 }

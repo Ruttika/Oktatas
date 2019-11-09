@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var messagesList: [PushMessage] = []
     var scheduleList: [Schedule] = []
+    var scheduleDataList: [SchedulePlanData] = []
     
     override func viewDidAppear(_ animated: Bool) {
         
@@ -35,14 +36,33 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         scheduleTableView.dataSource = self
         scheduleTableView.delegate = self
         
-        TasksProvider().loadPushMessages{ tasks in
-            self.messagesList = tasks
-        }
+        if (firstOpen == false) {
+            TasksProvider().loadPushMessages{ tasks in
+                self.messagesList = tasks
+            }
+
         
-        TasksProvider().loadSchedule{ tasks in
-            self.scheduleList = tasks
-           //print(tasks[1].modul_name)
+            var actualUserScheduleId: NSNumber!
+            TasksProvider().loadSchedulePlanData{ tasks in
+                
+                actualUserScheduleId = tasks[0].id
+            }
+        
+            TasksProvider().loadSchedule{ tasks in
+                
+                let date = Date()
+                let format = DateFormatter()
+                format.dateFormat = "yyyy-MM-dd"
+                let formattedDate = format.string(from: date)
+
+                for task in tasks {
+                    if (task.schedule_plan_data_id == actualUserScheduleId) && (task.date! > formattedDate) {
+                        self.scheduleList.append(task)
+                    }
+                }
+            }
         }
+
         
 //        TasksProvider().loadPushMessage{ tasks in //NEED TO TEST IT
 //            let lastPushMessage = String("\(tasks.message)")
@@ -123,5 +143,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         pushNoticeTableView.reloadData()
+        scheduleTableView.reloadData()
     }
 }

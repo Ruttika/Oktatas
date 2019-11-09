@@ -22,6 +22,7 @@
 		C2248BA32221990900AD2176 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2248BA22221990900AD2176 /* LogInVC.swift */; };
 		C2248BA52221A2E600AD2176 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2248BA42221A2E600AD2176 /* MenuVC.swift */; };
 		C254B99E236DF7F7007A86BB /* PushNoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C254B99D236DF7F7007A86BB /* PushNoticeCell.swift */; };
+		C26239B72376EF9500BA3CBB /* SchedulePlanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26239B62376EF9500BA3CBB /* SchedulePlanData.swift */; };
 		C28127A823579AAF00DF2507 /* PushMessageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28127A723579AAF00DF2507 /* PushMessageTask.swift */; };
 		C28D49C5234D0EA100871FEA /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C4234D0EA100871FEA /* UserDetails.swift */; };
 		C28D49C7234D12B100871FEA /* DatabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28D49C6234D12B100871FEA /* DatabaseConfig.swift */; };
@@ -53,6 +54,7 @@
 		C2248BA22221990900AD2176 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		C2248BA42221A2E600AD2176 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		C254B99D236DF7F7007A86BB /* PushNoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNoticeCell.swift; sourceTree = "<group>"; };
+		C26239B62376EF9500BA3CBB /* SchedulePlanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePlanData.swift; sourceTree = "<group>"; };
 		C28127A723579AAF00DF2507 /* PushMessageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushMessageTask.swift; sourceTree = "<group>"; };
 		C28D49C4234D0EA100871FEA /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		C28D49C6234D12B100871FEA /* DatabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConfig.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				C2168E622354F89200A014F2 /* PushMessage.swift */,
 				C21B682D236F1C62000A16DB /* Modul.swift */,
 				C21B6833236F80C0000A16DB /* Schedule.swift */,
+				C26239B62376EF9500BA3CBB /* SchedulePlanData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				C2248BA52221A2E600AD2176 /* MenuVC.swift in Sources */,
 				C2F6BCA2234106160092FA15 /* User.swift in Sources */,
 				C21B6834236F80C0000A16DB /* Schedule.swift in Sources */,
+				C26239B72376EF9500BA3CBB /* SchedulePlanData.swift in Sources */,
 				C21A7B25235266290056CA4F /* MoodleViewController.swift in Sources */,
 				C21B682E236F1C62000A16DB /* Modul.swift in Sources */,
 			);
