@@ -21,27 +21,9 @@ class MoodleViewController: UIViewController {
         let request = URLRequest(url: url!)
         webView.load(request)
         
-        var timer: Timer!
-        timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(getPushNotice), userInfo: nil, repeats: false)
-        
-        
+
     }
     
     
-    @objc func getPushNotice() { //NEED TO TEST IT
-        
-        if let currentPushMessage = UserDefaults.standard.object(forKey: "pushNotice") as? String {
-        
-            TasksProvider().loadPushMessage{ tasks in
-                let lastPushMessage = String("\(tasks[0].message)")
-                let pushNotice = TextDecoder().hexToStr(text: lastPushMessage)
-            
-                    if currentPushMessage != pushNotice {
-                        UserDefaults.standard.set(pushNotice, forKey: "pushNotice")
-                        UserDefaults.standard.synchronize()
-                        self.performSegue(withIdentifier: "adVC", sender: nil)
-                    }
-            }
-        }
-    }
+
 }

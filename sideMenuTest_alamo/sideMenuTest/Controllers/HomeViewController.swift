@@ -69,22 +69,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             TasksProvider().loadPushMessage{ tasks in //NEED TO TEST IT
                 print(tasks.count)
-                let lastPushMessage = String("\(tasks[0].message)")
+                let lastPushMessage = String("\(tasks[0].message ?? "")")
                 
                 let pushNotice = TextDecoder().hexToStr(text: lastPushMessage)
-                
+                print(pushNotice)
                 if let currentPushMessage = UserDefaults.standard.object(forKey: "pushNotice") as? String {
+                    print("asdasdasdasdasdsadasd")
                     print(currentPushMessage)
-                    if currentPushMessage != pushNotice {
-                        UserDefaults.standard.set(pushNotice, forKey: "pushNotice")
-                        UserDefaults.standard.synchronize()
-                    }
+                    //UserDefaults.standard.set(pushNotice, forKey: "pushNotice")
+                    //UserDefaults.standard.synchronize()
+                    
                 }
             }
         }
-        var timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(updateMessages), userInfo: nil, repeats: true)
-    }
+        if (firstOpen == false) {
+            var timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(updateMessages), userInfo: nil, repeats: true)
+            //var timer2 = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(getPushNotice), userInfo: nil, repeats: true)
     
+        }
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -162,5 +165,38 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         pushNoticeTableView.reloadData()
+       
+        if let currentPushMessage = UserDefaults.standard.object(forKey: "pushNotice") as? String {
+            print("belos")
+            TasksProvider().loadPushMessage{ tasks in
+                let lastPushMessage = String("\(tasks[0].message ?? "")")
+                print(lastPushMessage)
+                let pushNotice = TextDecoder().hexToStr(text: lastPushMessage)
+                
+                if currentPushMessage != pushNotice {
+                    UserDefaults.standard.set(pushNotice, forKey: "pushNotice")
+                    UserDefaults.standard.synchronize()
+                    self.performSegue(withIdentifier: "pushNoticeVC", sender: nil)
+                }
+            }
+        }
     }
+    
+//    @objc func getPushNotice() { //NEED TO TEST IT
+//        print("asdasd")
+//        if let currentPushMessage = UserDefaults.standard.object(forKey: "pushNotice") as? String {
+//            print("belos")
+//            TasksProvider().loadPushMessage{ tasks in
+//                let lastPushMessage = String("\(tasks[0].message ?? "")")
+//                print(lastPushMessage)
+//                let pushNotice = TextDecoder().hexToStr(text: lastPushMessage)
+//
+//                if currentPushMessage != pushNotice {
+//                    UserDefaults.standard.set(pushNotice, forKey: "pushNotice")
+//                    UserDefaults.standard.synchronize()
+//                    self.performSegue(withIdentifier: "pushNoticeVC", sender: nil)
+//                }
+//            }
+//        }
+//    }
 }

@@ -100,6 +100,7 @@ class LogInVC: UIViewController {
                     UserDefaults.standard.set(course, forKey: "course")
                     UserDefaults.standard.set(self.userNameTextField.text, forKey: "userName")
                     UserDefaults.standard.set(self.passwordTextField.text, forKey: "password")
+                    UserDefaults.standard.set("Default", forKey: "pushNotice")
                     UserDefaults.standard.synchronize()
                     succesfullLogin = true
                 }

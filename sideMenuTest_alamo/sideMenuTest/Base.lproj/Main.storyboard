@@ -920,7 +920,7 @@
                         <outlet property="mothersNameLbl" destination="HmU-8c-1t6" id="TUD-o2-Na7"/>
                         <outlet property="phoneNumberLbl" destination="VjF-9o-Q4J" id="7a6-c8-YGt"/>
                         <outlet property="tajLbl" destination="KKS-KI-Uzw" id="XF3-Ak-hV7"/>
-                        <segue destination="rK4-kP-TR5" kind="presentation" identifier="adVC" modalPresentationStyle="overCurrentContext" id="Lp7-bl-aDu"/>
+                        <segue destination="rK4-kP-TR5" kind="presentation" identifier="pushNoticeVC" modalPresentationStyle="overCurrentContext" id="Lp7-bl-aDu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87b-ja-Tuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1063,7 +1063,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="rK4-kP-TR5" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="8ol-5o-quo"/>
+                                    <segue destination="rK4-kP-TR5" kind="presentation" identifier="pushNoticeVC" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="8ol-5o-quo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yV1-wv-Auh">
@@ -1131,7 +1131,7 @@
                     <tabBarItem key="tabBarItem" title="Moodle" image="open-book" id="8xC-0t-ZnT"/>
                     <connections>
                         <outlet property="webView" destination="ZZK-at-UKh" id="Muc-gK-pHk"/>
-                        <segue destination="rK4-kP-TR5" kind="presentation" identifier="adVC" modalPresentationStyle="overCurrentContext" id="HO0-UV-Z74"/>
+                        <segue destination="rK4-kP-TR5" kind="presentation" identifier="pushNoticeVC" modalPresentationStyle="overCurrentContext" id="HO0-UV-Z74"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tge-Ii-Fm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1178,6 +1178,6 @@
         <image name="user-silhouette" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8ol-5o-quo"/>
+        <segue reference="Lp7-bl-aDu"/>
     </inferredMetricsTieBreakers>
 </document>
