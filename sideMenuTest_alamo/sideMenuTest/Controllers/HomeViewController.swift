@@ -105,20 +105,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cellReturn = UITableViewCell()
-        
         switch tableView {
         case pushNoticeTableView:
             
             if let cell = tableView.dequeueReusableCell(withIdentifier: "pushNoticeCell", for: indexPath) as? PushNoticeCell {
                 
                 let message = messagesList[indexPath.row]
-                
                 cell.configureTableViewCell(pushmessage: message)
-                //cell.transform = CGAffineTransform(rotationAngle: (.pi))
-                
+               
                  cellReturn = cell
             }else {
-                
                 cellReturn = UITableViewCell()
             }
         case scheduleTableView:
@@ -126,20 +122,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             if let cell = tableView.dequeueReusableCell(withIdentifier: "scheduleCell", for: indexPath) as? ScheduleCell {
                 
                 let schedule = scheduleList[indexPath.row]
-                
                 cell.configureTableViewCell(schedule: schedule)
-                //cell.transform = CGAffineTransform(rotationAngle: (.pi))
-                
                 cellReturn = cell
             }else {
-                
                 cellReturn = UITableViewCell()
             }
-            
         default:
             print("Baj van moni")
         }
-        
         return cellReturn
     }
     
